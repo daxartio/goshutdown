@@ -1,5 +1,7 @@
 # Graceful shutdown
 
+[![Go Documentation](https://godocs.io/github.com/daxartio/goshutdown?status.svg)](https://godocs.io/github.com/daxartio/goshutdown)
+
 The graceful shutdown is a mechanism that allows the application to finish the
 current requests before shutting down. This is useful to avoid losing data or
 to avoid corrupting the data.
