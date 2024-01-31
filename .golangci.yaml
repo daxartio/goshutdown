@@ -1,0 +1,18 @@
+run:
+  skip-dirs:
+    - "examples/"
+linters:
+  enable-all: true
+  disable:
+    - maligned
+    - golint
+    - nosnakecase
+    - deadcode
+    - exhaustivestruct
+    - scopelint
+    - ifshort
+    - structcheck
+    - varcheck
+    - interfacer
+    - depguard
+    - funlen
