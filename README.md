@@ -40,3 +40,6 @@ func main() {
 	}
 }
 ```
+
+`Wait` waits for the shutdown signal to be received or the timeout to expire.
+It returns an error if the shutdown process encounters an error or if the timeout is exceeded.
