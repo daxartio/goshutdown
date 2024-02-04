@@ -26,11 +26,17 @@ func main() {
 
 	go server.Run()
 
-	goshutdown.New().WithTimeout(10 * time.Second).WithHandler(func(ctx context.Context) {
-		println("Shutting down...")
+	err := goshutdown.New().
+		WithTimeout(10 * time.Second).
+		WithHandler(func(ctx context.Context) error {
+			println("Shutting down...")
 
-		server.Stop(ctx)
-	}).Wait()
+			server.Stop(ctx)
+
+			return nil
+		}).Wait()
+	if err != nil {
+		println(err.Error())
+	}
 }
-
 ```
